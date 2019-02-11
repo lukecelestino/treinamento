@@ -71,7 +71,6 @@ O usuário deverá poder buscar um leilão utilizando os seguintes filtros:
 
 - Seu nome completo ou parte dele
 - Um intervalo de datas de quando ele foi iniciado ou finalizado
-- Um intervalor de valores para o valor final.
 
 ## Eu, enquanto usuário, dado que já estou autenticado no sistema, quero poder visualizar os leilões ativos criados por outros usuários.
 
