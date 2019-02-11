@@ -10,27 +10,33 @@ Payload:
 }
 ```
 Response:
+```javascript
 {
 	"username": string,
 	"access_token": string,
 	"refresh_token": string
 }
+```
 
 ## POST /authenticate/refresh
 
 Utilize este método para renovar um token de acesso expirado
 
 Payload: 
+```javascript
 {
 	"email": string,
 	"refresh_token": string
 }
+```
 
 Response:
+```javascript
 {
 	"username": string,
 	"access_token": string
 }
+```
 
 ## GET /auctions
 
@@ -46,6 +52,7 @@ Query Parameters:
 - owner: Dono do leilão
 
 Response: 
+```javascript
 {
 	"hasNext" : boolean,
 	"items": [
@@ -68,12 +75,14 @@ Response:
 		}
 	]
 }
+```
 
 ## POST /auctions
 
 Utilize este método para criar um leilão
 
 Payload: 
+```javascript
 {
 	"name": string,
 	"photo": string (Image Base64 Encoded),
@@ -81,8 +90,10 @@ Payload:
 	"bid_type" : number (1 = free, 2 = fixed),
 	"bid_step" : number (Required if bid_type = 2)
 }
+```
 
 Response: 
+```javascript
 {
 	"owner": string,
 	"name": string,
@@ -93,12 +104,14 @@ Response:
 	"_id": string,
 	"status": number (0=rascunho, 1=ativo, 2=finalizado)
 }
+```
 
 ## PUT /auctions/:auctionId
 
 Utilize este método para atualizar os dados de um leilão em rascunho
 
 Payload: 
+```javascript
 {
 	"name": string,
 	"photo": string (Image Base64 Encoded),
@@ -106,8 +119,10 @@ Payload:
 	"bid_type" : number (1 = free, 2 = fixed),
 	"bid_step" : number (Required if bid_type = 2)
 }
+```
 
 Response: 
+```javascript
 {
 	"owner": string,
 	"name": string,
@@ -118,6 +133,7 @@ Response:
 	"_id": string,
 	"status": number (0=rascunho, 1=ativo, 2=finalizado)
 }
+```
 
 ## DELETE /auctions/:auctionId
 
@@ -136,27 +152,35 @@ Path Parameters:
 - auctionId: ID do leilão que será ativado
 
 Payload: 
+```javascript
 {
 	"status": 1
 }
+```
 
 Response: 
+```javascript
 {
 	"_id": string,
 	"status": number (0=rascunho, 1=ativo, 2=finalizado),
 	"expirationDate": Date
 }
+```
 
 ## POST /auctions/:auctionId/bids
 
 Utilize este método para inserir um lance em um leilão
 
 Payload: 
+```javascript
 {
 	"bid_value": number
 }
+```
 
 Response: 
+```javascript
 {
 	"bidResult": string
 }
+```
