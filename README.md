@@ -100,6 +100,6 @@ O usuário deverá poder visualizar as seguintes informações:
 
 - O projeto deve ser entregue através de um Pull Request neste próprio repositório.
 - No arquivo API.md existe uma explicação de como a API funciona e dos métodos disponíveis.
-- No arquivo Mock.md existe uma **sugestão** de layout para as telas propostas.
+- Na pasta mocks existe uma **sugestão** de layout para as telas propostas.
 - O desafio é sobre __interação__, não precisa fazer tudo, basta ir fazendo os pedaços que se sente mais confortável e entregando aos poucos.
 - Organize seus commits. Sua utilização do git faz parte do desafio.
