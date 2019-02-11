@@ -43,6 +43,8 @@ Response:
 Utilize este método para pesquisar leilões
 
 Query Parameters: 
+- page: Página que deve retornar (default: 1)
+- pageSize: Quantidade de leilões que deve ser retornado (default: 5, max: 10)
 - name: Nome do leilão para filtro
 - startCreatedAt: Data início em que o leilão foi criado
 - endCreatedAt: Data fim em que o leilão foi criado
