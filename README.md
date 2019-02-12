@@ -1,4 +1,4 @@
-# Desafio Front-Ent
+# Desafio Front-End
 
 A TOTVS quer lançar um site de leilões. Foi feita uma planning com o time o qual você é integrante e a sprint começou. Suas tarefas são as seguintes:
 
