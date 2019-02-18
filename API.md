@@ -57,6 +57,7 @@ Response:
 	"items": [
 		{
 			"_id": string,
+			"name": string,
 			"photo_url": string (Image URI),
 			"base_price": number,
 			"bid_type": number (1 = free, 2 = fixed),
