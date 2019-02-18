@@ -1,4 +1,4 @@
-## POST /authenticate/new
+## POST /api/v1/auth/new
 
 Utilize este método para obter os tokens de acesso utilizando e-mail e senha fornecidos
 
@@ -17,7 +17,7 @@ Response:
 }
 ```
 
-## POST /authenticate/refresh
+## POST /api/v1/auth/refresh
 
 Utilize este método para renovar um token de acesso expirado
 
@@ -32,7 +32,6 @@ Payload:
 Response:
 ```javascript
 {
-	"username": string,
 	"access_token": string
 }
 ```
