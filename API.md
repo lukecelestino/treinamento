@@ -24,7 +24,6 @@ Utilize este método para renovar um token de acesso expirado
 Payload: 
 ```javascript
 {
-	"email": string,
 	"refresh_token": string
 }
 ```
