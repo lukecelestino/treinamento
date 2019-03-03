@@ -43,7 +43,7 @@ Query Parameters:
 - page: Página que deve retornar (default: 1)
 - pageSize: Quantidade de leilões que deve ser retornado (default: 5, max: 10)
 - name: Nome do leilão para filtro
-- status: Status atual do leilão (0=rascunho, 1=ativo, 2=finalizado)
+- status: Status atual do leilão (0=rascunho, 1=ativo)
 - owner: Dono do leilão
 
 Response: 
@@ -58,7 +58,7 @@ Response:
 			"base_price": number,
 			"bid_type": number (1 = free, 2 = fixed),
 			"bid_step": number (Only if bid_type = 2),
-			"status": number (0=rascunho, 1=ativo, 2=finalizado),
+			"status": number (0=rascunho, 1=ativo),
 			"owner": string,
 			"expirationDate": Date,
 			"bids": [
@@ -97,8 +97,9 @@ Response:
 	"base_price": number,
 	"bid_type": number (1 = free, 2 = fixed),
 	"bid_step": number (Only if bid_type = 2),
+	"expirationDate": Date,
 	"_id": string,
-	"status": number (0=rascunho, 1=ativo, 2=finalizado)
+	"status": number (0=rascunho, 1=ativo)
 }
 ```
 
@@ -127,7 +128,8 @@ Response:
 	"bid_type": number (1 = free, 2 = fixed),
 	"bid_step": number (Only if bid_type = 2),
 	"_id": string,
-	"status": number (0=rascunho, 1=ativo, 2=finalizado)
+	"status": number (0=rascunho, 1=ativo),
+	"expirationDate": Date,
 }
 ```
 
