@@ -160,7 +160,7 @@ Response:
 ```javascript
 {
 	"_id": string,
-	"status": number (0=rascunho, 1=ativo, 2=finalizado),
+	"status": number (0=rascunho, 1=ativo),
 	"expirationDate": Date
 }
 ```
