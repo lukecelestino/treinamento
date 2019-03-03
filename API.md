@@ -43,8 +43,6 @@ Query Parameters:
 - page: Página que deve retornar (default: 1)
 - pageSize: Quantidade de leilões que deve ser retornado (default: 5, max: 10)
 - name: Nome do leilão para filtro
-- startCreatedAt: Data início em que o leilão foi ativado
-- endCreatedAt: Data fim em que o leilão foi ativado
 - status: Status atual do leilão (0=rascunho, 1=ativo, 2=finalizado)
 - owner: Dono do leilão
 
