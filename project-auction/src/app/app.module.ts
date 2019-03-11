@@ -11,6 +11,11 @@ import { LiteralService } from './i18n/literal.service';
 
 import { generalEn } from './i18n/general-en';
 import { generalPt } from './i18n/general-pt';
+import { HomeComponent } from './home/home.component';
+import { SketchComponent } from './auctions/sketch/sketch.component';
+import { MyAuctionsComponent } from './auctions/my-auctions/my-auctions.component';
+import { FinishedAuctionsComponent } from './auctions/finished-auctions/finished-auctions.component';
+import { CardComponent } from './auctions/card/card.component';
 
 const i18nConfig: ThfI18nConfig = {
   default: {
@@ -29,6 +34,11 @@ const i18nConfig: ThfI18nConfig = {
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    SketchComponent,
+    MyAuctionsComponent,
+    FinishedAuctionsComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
