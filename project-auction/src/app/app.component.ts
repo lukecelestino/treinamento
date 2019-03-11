@@ -1,3 +1,4 @@
+import { LiteralService } from './i18n/literal.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project-auction';
+  public literals = {};
+
+  constructor(private literalsService: LiteralService) {
+    this.literals = this.literalsService.literals;
+  }
 }

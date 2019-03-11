@@ -7,6 +7,8 @@ import { ThfModule } from '@totvs/thf-ui';
 
 import { AppComponent } from './app.component';
 
+import { LiteralService } from './i18n/literal.service';
+
 import { generalEn } from './i18n/general-en';
 import { generalPt } from './i18n/general-pt';
 
@@ -34,7 +36,7 @@ const i18nConfig: ThfI18nConfig = {
     ThfModule,
     ThfI18nModule.config(i18nConfig)
   ],
-  providers: [],
+  providers: [LiteralService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
