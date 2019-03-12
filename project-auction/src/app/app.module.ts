@@ -1,3 +1,4 @@
+import { AuctionsModule } from './auctions/auctions.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 
@@ -10,10 +11,7 @@ import { LiteralService } from './i18n/literal.service';
 import { generalEn } from './i18n/general-en';
 import { generalPt } from './i18n/general-pt';
 import { HomeComponent } from './home/home.component';
-import { SketchComponent } from './auctions/sketch/sketch.component';
-import { MyAuctionsComponent } from './auctions/my-auctions/my-auctions.component';
-import { FinishedAuctionsComponent } from './auctions/finished-auctions/finished-auctions.component';
-import { SharedModule } from './shared/shared.module';
+import { auctionPt } from './i18n/auction-pt';
 
 const i18nConfig: ThfI18nConfig = {
   default: {
@@ -26,23 +24,23 @@ const i18nConfig: ThfI18nConfig = {
       'pt-BR': generalPt,
       'en-US': generalEn
     },
+    auction: {
+      'pt-BR': auctionPt,
+    }
   }
 };
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    SketchComponent,
-    MyAuctionsComponent,
-    FinishedAuctionsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ThfModule,
     ThfI18nModule.config(i18nConfig),
-    SharedModule
+    AuctionsModule
   ],
   providers: [LiteralService],
   bootstrap: [AppComponent]

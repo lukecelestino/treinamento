@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuctionsResponse } from '../auction';
 import { AuctionsService } from '../auctions.service';
+import { LiteralService } from 'src/app/i18n/literal.service';
 
 @Component({
   selector: 'app-my-auctions',
@@ -9,8 +10,11 @@ import { AuctionsService } from '../auctions.service';
 })
 export class MyAuctionsComponent implements OnInit {
   public myAuctions: AuctionsResponse;
+  public literals = {};
 
-  constructor(private _auctionsService: AuctionsService) { }
+  constructor(private _auctionsService: AuctionsService, private literalsService: LiteralService) {
+    this.literals = this.literalsService.literalsAuction;
+   }
 
   ngOnInit() {
     this._auctionsService.getMyAuctions().subscribe( response  => {

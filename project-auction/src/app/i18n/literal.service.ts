@@ -7,9 +7,15 @@ import { Injectable } from '@angular/core';
 export class LiteralService {
 
   public literals = {};
+  public literalsAuction = {};
+
 
   constructor(private thfi18nService: ThfI18nService) {
     this.thfi18nService.getLiterals({language: navigator.language})
       .subscribe(response => this.literals = response);
+
+      this.thfi18nService.getLiterals({context: 'auction', language: navigator.language})
+      .subscribe(response => this.literalsAuction = response);
+
   }
 }

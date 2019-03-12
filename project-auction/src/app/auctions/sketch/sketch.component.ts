@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuctionsService } from './../auctions.service';
 import { AuctionsResponse } from '../auction';
+import { LiteralService } from 'src/app/i18n/literal.service';
 
 @Component({
   selector: 'app-sketch',
@@ -9,8 +10,11 @@ import { AuctionsResponse } from '../auction';
 })
 export class SketchComponent implements OnInit {
   public sketchAuctions: AuctionsResponse;
+  public literals = {};
 
-  constructor(private _auctionsService: AuctionsService) { }
+  constructor(private _auctionsService: AuctionsService, private literalsService: LiteralService) {
+    this.literals = this.literalsService.literalsAuction;
+   }
 
   ngOnInit() {
     this._auctionsService.getSketchsAuctions().subscribe( response  => {
