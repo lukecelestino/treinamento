@@ -1,0 +1,60 @@
+{
+  "auctions": [
+    {
+      "_id": "5c853501ad331217442f0cca",
+      "name": "Leilão de Imoveis Totvs",
+      "photo": "https://itforum365.com.br/wp-content/uploads/sites/6/2017/06/TOTVS-PRA%C3%87A-SOMOS-TOTVERS-2-110x80.jpg",
+      "base_price": 120000,
+      "bid_type": 2,
+      "bid_step": 12000000,
+      "status": 1,
+      "owner": "SP01\\william.lima",
+      "bids": [],
+      "createdAt": "2019-03-10T16:02:09.086Z",
+      "updatedAt": "2019-03-10T16:02:09.086Z",
+      "__v": 0
+    },
+    {
+      "_id": "5c853501ad331217442f0cca",
+      "name": "Leilão de Carros Totvs",
+      "photo": "https://portalerp.com/images/joomla/AIrobocarro.png",
+      "base_price": 130000,
+      "bid_type": 2,
+      "bid_step": 13000000,
+      "status": 0,
+      "owner": "SP01\\william.lima",
+      "bids": [],
+      "createdAt": "2019-03-10T16:02:09.086Z",
+      "updatedAt": "2019-03-10T16:02:09.086Z",
+      "__v": 0
+    },
+    {
+      "_id": "5c853501ad331217442f0cca",
+      "name": "Leilão de Celulares Totvs",
+      "photo": "https://www.meliuz.com.br/blog/wp-content/uploads/2018/05/como-comprar-celular-novoousado-1.jpg",
+      "base_price": 150000,
+      "bid_type": 2,
+      "bid_step": 15000000,
+      "status": 1,
+      "owner": "SP01\\william.lima",
+      "bids": [],
+      "createdAt": "2019-03-10T16:02:09.086Z",
+      "updatedAt": "2019-03-10T16:02:09.086Z",
+      "__v": 0
+    },
+    {
+      "_id": "5c853501ad331217442f0cca",
+      "name": "Leilão de Computadores Totvs",
+      "photo": "http://www.srcomputador.com.br/blog/wp-content/uploads/2016/08/pc-gamer-vai-jogar-o-que.jpg",
+      "base_price": 150000,
+      "bid_type": 2,
+      "bid_step": 15000000,
+      "status": 0,
+      "owner": "SP01\\william.lima",
+      "bids": [],
+      "createdAt": "2019-03-10T16:02:09.086Z",
+      "updatedAt": "2019-03-10T16:02:09.086Z",
+      "__v": 0
+    }
+  ]
+}

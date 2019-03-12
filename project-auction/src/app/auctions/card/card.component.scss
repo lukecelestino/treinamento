@@ -1,0 +1,16 @@
+.container-column {
+  display: flex;
+  flex-direction: column;
+}
+.container-between {
+  display: flex;
+  justify-content: space-between
+}
+
+.image-card{
+  max-width: 100%;
+}
+
+.container-card{
+  margin-bottom: 10px;
+}
