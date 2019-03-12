@@ -8,8 +8,10 @@ import { HttpClient } from '@angular/common/http';
 export class AuctionsService {
 
   constructor(private _http: HttpClient) {
-    this._http.get('http://localhost:3000/auctions').subscribe(response => {
-      console.log(response);
-    })
   }
+
+  public getAllAuctions(){
+    return this._http.get('http://localhost:3000/auctions');
+  }
+
 }
