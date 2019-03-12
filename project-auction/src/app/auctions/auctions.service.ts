@@ -1,5 +1,7 @@
+import { HttpService } from './../shared/services/http.service';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { AuctionsResponse } from './auction';
 
 @Injectable({
   providedIn: 'root'
@@ -7,11 +9,21 @@ import { HttpClient } from '@angular/common/http';
 
 export class AuctionsService {
 
-  constructor(private _http: HttpClient) {
+  constructor(private _http: HttpService) {
   }
 
-  public getAllAuctions(){
-    return this._http.get('http://localhost:3000/auctions');
+  public getSketchsAuctions(): Observable<AuctionsResponse> {
+    return this._http.get('/auctions', {
+      status: 0
+    });
+
+  }
+
+  public getMyAuctions(): Observable<AuctionsResponse> {
+    return this._http.get('/auctions', {
+      status: 1
+    });
+
   }
 
 }

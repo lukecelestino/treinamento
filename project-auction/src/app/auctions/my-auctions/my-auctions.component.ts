@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuctionsResponse } from '../auction';
+import { AuctionsService } from '../auctions.service';
 
 @Component({
   selector: 'app-my-auctions',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-auctions.component.scss']
 })
 export class MyAuctionsComponent implements OnInit {
+  public myAuctions: AuctionsResponse;
 
-  constructor() { }
+  constructor(private _auctionsService: AuctionsService) { }
 
   ngOnInit() {
+    this._auctionsService.getMyAuctions().subscribe( response  => {
+      this.myAuctions = response;
+    });
   }
 
 }

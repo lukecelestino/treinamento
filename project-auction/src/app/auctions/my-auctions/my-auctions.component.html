@@ -1,4 +1,7 @@
 <div class="thf-font-display">
   <h2 class="sub-title">Meus Leilões</h2>
 </div>
-<app-card></app-card>
+<div *ngFor="let auction of myAuctions">
+  <app-card [t-name]="auction.name" [t-base_price]="auction.base_price"  [t-photo_url]="auction.photo" [t-bid_type]="auction.bid_type" [t-bid_step]="auction.bid_step">
+  </app-card>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuctionsService } from './../auctions.service';
+import { AuctionsResponse } from '../auction';
 
 @Component({
   selector: 'app-sketch',
@@ -7,11 +8,12 @@ import { AuctionsService } from './../auctions.service';
   styleUrls: ['./sketch.component.scss']
 })
 export class SketchComponent implements OnInit {
-  private sketchAuctions: any;
+  public sketchAuctions: AuctionsResponse;
+
   constructor(private _auctionsService: AuctionsService) { }
 
   ngOnInit() {
-    this._auctionsService.getAllAuctions().subscribe( response => {
+    this._auctionsService.getSketchsAuctions().subscribe( response  => {
       this.sketchAuctions = response;
     });
   }

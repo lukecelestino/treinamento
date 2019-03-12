@@ -1,6 +1,7 @@
 <div class="thf-font-display">
   <h2 class="sub-title">Rascunho</h2>
 </div>
-<div *ngFor="">
-  <app-card  t-name="William"></app-card>
+<div *ngFor="let auction of sketchAuctions">
+  <app-card [t-name]="auction.name" [t-base_price]="auction.base_price"  [t-photo_url]="auction.photo" [t-bid_type]="auction.bid_type" [t-bid_step]="auction.bid_step">
+  </app-card>
 </div>

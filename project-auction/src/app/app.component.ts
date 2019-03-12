@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'project-auction';
+  public title = 'project-auction';
   public literals = {};
 
   constructor(private literalsService: LiteralService) {

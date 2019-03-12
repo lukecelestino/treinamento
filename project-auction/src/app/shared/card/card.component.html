@@ -1,0 +1,13 @@
+<thf-widget
+  t-height="350"
+  class="thf-lg-3 thf-md-4 thf-sm-12 thf-mb-lg-1 thf-mb-md-1 thf-mb-sm-1" [t-primary-label]="literals?.delete" [t-secondary-label]="literals?.active">
+    <img src="{{ image }}" class="image-card">
+
+    <div class="container-column">
+      <div class="thf-font-text-bold">{{ name }}</div>
+      <div class="thf-row container-between">
+        <div class="thf-font-text">{{ formatBid( bid_type ) }}  {{ bid_step | currency : 'BRL'  }} </div>
+        <div class="thf-font-text">{{ base_price | currency : 'BRL' }}</div>
+      </div>
+    </div>
+  </thf-widget>
