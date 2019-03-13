@@ -4,11 +4,17 @@ import { SketchComponent } from './sketch/sketch.component';
 import { MyAuctionsComponent } from './my-auctions/my-auctions.component';
 import { FinishedAuctionsComponent } from './finished-auctions/finished-auctions.component'
 import { SharedModule } from '../shared/shared.module';
+import { AddAuctionComponent } from './add-auction/add-auction.component';
+import { OpenAuctionsComponent } from './open-auctions/open-auctions.component';
+
+import { AuctionRoutingModule } from './auction-routing.module';
 @NgModule({
   declarations: [
     SketchComponent,
     MyAuctionsComponent,
-    FinishedAuctionsComponent
+    FinishedAuctionsComponent,
+    AddAuctionComponent,
+    OpenAuctionsComponent
   ],
   exports: [
     SketchComponent,
@@ -17,7 +23,8 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    AuctionRoutingModule
   ]
 })
 export class AuctionsModule { }
