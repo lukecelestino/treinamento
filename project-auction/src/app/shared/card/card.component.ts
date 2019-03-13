@@ -17,7 +17,7 @@ export class CardComponent implements OnInit {
   @Input('t-bid_type') bid_type;
 
   public bid_step;
-  @Input('t-bid_step') set formatBidStep(value: number){
+  @Input('t-bid_step') set formatBidStep(value: number) {
     this.bid_step = value || '';
   }
 

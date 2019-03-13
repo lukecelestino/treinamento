@@ -13,7 +13,7 @@ export class MyAuctionsComponent implements OnInit {
   public literals = {};
 
   constructor(private _auctionsService: AuctionsService, private literalsService: LiteralService) {
-    this.literals = this.literalsService.literalsAuction;
+    this.literals = this.literalsService.literalsAuction['myAuction'];
    }
 
   ngOnInit() {

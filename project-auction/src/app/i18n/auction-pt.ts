@@ -5,5 +5,8 @@ export const auctionPt = {
   myAuction : {
     name : 'Meus Leilões'
   },
+  finishedAuctions: {
+    name : 'Leilões finalizados'
+  }
 
 };
