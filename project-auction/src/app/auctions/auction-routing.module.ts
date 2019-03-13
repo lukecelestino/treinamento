@@ -3,13 +3,15 @@ import { AddAuctionComponent } from './add-auction/add-auction.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
-
-import { HomeComponent } from './../home/home.component';
+import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu.component';
 
 const auctionRoutes: Routes = [
-    { path: 'auction/home', component: HomeComponent },
-    { path: 'auction/add-auction', component: AddAuctionComponent },
-    { path: 'auction/open-auctions', component: OpenAuctionsComponent }
+    { path: 'auction', component: MenuComponent, children: [
+        { path: '', component: HomeComponent },
+        { path: 'add-auction', component: AddAuctionComponent },
+        { path: 'open-auctions', component: OpenAuctionsComponent }
+    ]}
 ];
 
 @NgModule({

@@ -7,7 +7,6 @@ import { ThfModule } from '@totvs/thf-ui';
 
 import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { LiteralService } from './i18n/literal.service';
@@ -35,8 +34,7 @@ const i18nConfig: ThfI18nConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,51 @@
-<div class="thf-wrapper">
-  <p> add-auction works! </p>
-</div>
+<thf-page-edit t-title="Adicionar leilão" [t-disable-submit]="!formAuction.valid">
+
+<form [formGroup]="formAuction">
+  <div class="thf-row">
+    <thf-input
+      class="thf-lg-6"
+      formControlName="name"
+      t-required="true"
+      t-label="Nome">
+    </thf-input>
+
+    <thf-decimal
+      class="thf-lg-6"
+      formControlName="base_price"
+      t-required="true"
+      t-label="Preço base">
+    </thf-decimal>
+  </div>
+
+  <div class="thf-row">
+    <thf-select
+      class="thf-lg-6"
+      formControlName="bid_type"
+      t-required="true"
+      t-label="Tipo de lance"
+      [t-options]="bidTypeOptions">
+    </thf-select>
+
+    <thf-decimal
+      class="thf-lg-6"
+      formControlName="bid_step"
+      t-required="true"
+      t-label="Step">
+    </thf-decimal>
+  </div>
+
+  <div class="thf-row">
+    <thf-input
+      class="thf-lg-12"
+      formControlName="photo"
+      t-required="true"
+      t-label="Foto">
+    </thf-input>
+  </div>
+
+  <div *ngIf="formAuction.get('photo').value" class="thf-row">
+    <img [src]="formAuction.get('photo').value" width="100%" height="500px">
+  </div>
+</form>
+
+</thf-page-edit>

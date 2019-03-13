@@ -8,13 +8,20 @@ import { AddAuctionComponent } from './add-auction/add-auction.component';
 import { OpenAuctionsComponent } from './open-auctions/open-auctions.component';
 
 import { AuctionRoutingModule } from './auction-routing.module';
+import { ThfModule } from '@totvs/thf-ui';
+import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     SketchComponent,
     MyAuctionsComponent,
     FinishedAuctionsComponent,
     AddAuctionComponent,
-    OpenAuctionsComponent
+    OpenAuctionsComponent,
+    HomeComponent,
+    MenuComponent
   ],
   exports: [
     SketchComponent,
@@ -24,7 +31,10 @@ import { AuctionRoutingModule } from './auction-routing.module';
   imports: [
     CommonModule,
     SharedModule,
-    AuctionRoutingModule
+    AuctionRoutingModule,
+    ThfModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AuctionsModule { }

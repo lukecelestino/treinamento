@@ -16,8 +16,8 @@ export class HttpService {
     const params = new HttpParams({
       fromObject: queryParams
     });
-
     return this._http.get(this.URL + endpoint, {params});
   }
+  
 
 }

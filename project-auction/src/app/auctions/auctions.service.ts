@@ -24,6 +24,8 @@ export class AuctionsService {
       status: 1
     });
 
+    
+
   }
 
 }
