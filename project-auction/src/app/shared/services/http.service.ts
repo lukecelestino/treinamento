@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HttpService {
-  private readonly URL = 'http://localhost:3000';
+  private readonly URL = 'http://10.171.67.175:17114/api/v1';
 
   constructor(private _http: HttpClient) {
   }
@@ -18,6 +18,10 @@ export class HttpService {
     });
     return this._http.get(this.URL + endpoint, {params});
   }
-  
+
+  public post(endpoint: string, payload: object, params = {}): Observable<any> {
+    return this._http.post(this.URL + endpoint, payload, params);
+  }
+
 
 }

@@ -9,7 +9,7 @@ import { LiteralService } from 'src/app/i18n/literal.service';
   styleUrls: ['./sketch.component.scss']
 })
 export class SketchComponent implements OnInit {
-  public sketchAuctions: AuctionsResponse;
+  public sketchAuctions;
   public literals = {};
 
   constructor(private _auctionsService: AuctionsService, private literalsService: LiteralService) {
@@ -18,7 +18,7 @@ export class SketchComponent implements OnInit {
 
   ngOnInit() {
     this._auctionsService.getSketchsAuctions().subscribe( response  => {
-      this.sketchAuctions = response;
+      this.sketchAuctions = response.auctions;
     });
   }
 
