@@ -3,6 +3,6 @@
 </div>
 
 <div *ngFor="let auction of sketchAuctions">
-  <app-card [t-name]="auction.name" [t-base_price]="auction.base_price"  [t-photo_url]="auction.photo" [t-bid_type]="auction.bid_type" [t-bid_step]="auction.bid_step">
+  <app-card (t-auction-info)="editAuction($event)" [t-id]="auction._id" [t-name]="auction.name" [t-base_price]="auction.base_price"  [t-photo_url]="auction.photo" [t-bid_type]="auction.bid_type" [t-bid_step]="auction.bid_step">
   </app-card>
 </div>

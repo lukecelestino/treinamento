@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { LiteralService } from 'src/app/i18n/literal.service';
 
 @Component({
@@ -21,20 +21,34 @@ export class CardComponent implements OnInit {
     this.bid_step = value || '';
   }
 
+  @Input('t-id') id;
+
+  @Output('t-auction-info') auction_info = new EventEmitter<any>();
+
   public literals = {};
 
   constructor(private literalsService: LiteralService) {
     this.literals = this.literalsService.literals;
-
-    console.log(this.literals);
    }
 
   ngOnInit() {
-    console.log(this.bid_type);
   }
 
   formatBid(type) {
     return (type === 1) ? 'Lance Livre' : 'Lance Fixo';
+  }
+
+  emitAuctionInfo() {
+    const data = {
+      id: this.id,
+      name: this.name,
+      bid_step: this.bid_step,
+      bid_type: this.bid_type,
+      base_price: this.base_price,
+      photo: this.image
+    };
+
+    this.auction_info.emit(data);
   }
 
 }

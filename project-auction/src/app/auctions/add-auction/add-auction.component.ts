@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ThfSelectOption } from '@totvs/thf-ui';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { AuctionsService } from '../auctions.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-auction',
@@ -11,7 +13,9 @@ export class AddAuctionComponent implements OnInit {
   public bidTypeOptions: Array<ThfSelectOption>;
   formAuction: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private _auctionsService: AuctionsService,
+              private _activateRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.bidTypeOptions = [
@@ -26,12 +30,17 @@ export class AddAuctionComponent implements OnInit {
       bid_step: this.formBuilder.control('', [Validators.required]),
       photo: this.formBuilder.control('', [Validators.required])
     });
-    console.log(this.formAuction);
+
+    const id = this._activateRoute.snapshot.params.id;
+    if (id) {
+
+    }
+
   }
 
   save() {
-    console.log(this.formAuction);
+    this._auctionsService.createAuction(this.formAuction.value)
+      .subscribe(response => console.log(response));
   }
 
-  
 }

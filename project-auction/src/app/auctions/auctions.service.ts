@@ -14,18 +14,20 @@ export class AuctionsService {
 
   public getSketchsAuctions(): Observable<AuctionsResponse> {
     return this._http.get('/auctions', {
-      status: 0
+      status: 0,
+      owner: localStorage.owner
     });
 
   }
 
   public getMyAuctions(): Observable<AuctionsResponse> {
     return this._http.get('/auctions', {
-      status: 1
+      status: 1,
     });
+  }
 
-    
-
+  public createAuction(payload): Observable<AuctionsResponse> {
+    return this._http.post('/auctions', payload);
   }
 
 }
