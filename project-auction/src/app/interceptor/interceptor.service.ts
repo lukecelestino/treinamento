@@ -29,6 +29,7 @@ export class InterceptorService implements HttpInterceptor {
               refresh_token: localStorage.refresh_token
             }).pipe(
               flatMap(response => {
+                localStorage.setItem('access_token', response.access_token);
                 const requestRefresh = req.clone({
                   setHeaders: {
                     'Content-Type': 'application/json',
@@ -38,10 +39,10 @@ export class InterceptorService implements HttpInterceptor {
                 return next.handle(requestRefresh);
               })
             ) //flatMap vs Map
-
           }
+          return next.handle(request);
         })
-      )
+      );
   }
   refreshToken(refreshToken) {
     return this._http.post('/auth/refresh', refreshToken);

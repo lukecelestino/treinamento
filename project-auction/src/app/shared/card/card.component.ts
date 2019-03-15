@@ -38,17 +38,17 @@ export class CardComponent implements OnInit {
     return (type === 1) ? 'Lance Livre' : 'Lance Fixo';
   }
 
-  emitAuctionInfo() {
+  emitAuctionInfo(action: string) {
     const data = {
       id: this.id,
-      name: this.name,
-      bid_step: this.bid_step,
-      bid_type: this.bid_type,
-      base_price: this.base_price,
-      photo: this.image
+      my_action: action,
     };
 
     this.auction_info.emit(data);
+  }
+
+  emitAuctionToDelete() {
+    this.emitAuctionInfo('delete');
   }
 
 }

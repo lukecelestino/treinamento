@@ -23,4 +23,12 @@ export class HttpService {
     return this._http.post(this.URL + endpoint, payload, params);
   }
 
+  public put(endpoint: string, id: string, payload: object): Observable<any> {
+    return this._http.put(this.URL + endpoint + id, payload);
+  }
+
+  public delete(endpoint: string, id: string): Observable<any> {
+    return this._http.delete(this.URL + endpoint + id);
+  }
+
 }
